@@ -1,0 +1,12 @@
+type Query {
+    getProductos : [Producto]
+}
+
+type Producto {
+    id : Int
+    nombre : String
+    fechaLlegada : String
+    cantidad : Int
+    costo : Float
+    categoria : String
+}

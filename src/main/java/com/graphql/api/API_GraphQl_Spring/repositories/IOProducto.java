@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.graphql.api.API_GraphQl_Spring.models.Producto;
 
 @Repository
-public interface IOProducto extends JpaRepository<Producto,String>{
+public interface IOProducto extends JpaRepository<Producto,Integer>{
     
 }

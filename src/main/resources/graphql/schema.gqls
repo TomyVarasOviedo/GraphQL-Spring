@@ -1,9 +1,21 @@
+type Mutation {
+    addProducto(producto:ProductoRequest) : Producto
+    eliminarProducto(idProducto:Int) : Boolean
+}
 type Query {
     getProductos : [Producto]
 }
 
 type Producto {
-    id : Int
+    idProducto: Int
+    nombre : String
+    fechaLlegada : String
+    cantidad : Int
+    costo : Float
+    categoria : String
+}
+
+input ProductoRequest {
     nombre : String
     fechaLlegada : String
     cantidad : Int

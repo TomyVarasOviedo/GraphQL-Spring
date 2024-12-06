@@ -16,4 +16,16 @@ public class ProductoService {
     public ArrayList<Producto> getProductos() {
         return (ArrayList<Producto>) userRepository.findAll();
     }
+    public Producto guardarProducto(Producto producto) {
+        return userRepository.save(producto);
+    }
+    @SuppressWarnings("deprecation")
+    public boolean  eliminaProducto(int idProducto) {
+        Producto producto = (userRepository.existsById(idProducto))? userRepository.getById(idProducto) : null;
+        if (producto != null) {
+            userRepository.deleteById(idProducto);
+            return true;
+        }
+        return false;
+    }
 }
